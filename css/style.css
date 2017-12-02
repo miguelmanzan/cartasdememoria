@@ -1,0 +1,140 @@
+body
+{
+  background:url(../img/background.png);
+  font-family: 'Londrina Solid', cursive;
+}
+
+.card
+{
+  margin: 40px auto;
+  width: 50%;
+  background-color: #e8ddc7;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  color: #ffffff;
+  box-shadow: 7px 7px 3px #867669;
+  border: 1px solid #385843;
+  border-radius: 10px;
+}
+
+#question
+{
+  background-color: #6F5F49;
+  padding: 40px 20px;
+  display: none;
+}
+
+#answer
+{
+  background-color: #6F7248;
+  padding: 40px 20px;
+
+}
+
+.header-title
+{
+  width: 70%;
+  margin: 7px auto;
+  text-align: center;
+  color: #6F5F49;
+  font-size: 70px;
+}
+
+#decks-table
+{
+  margin: 80px auto;
+  text-align: center;
+  color: #000000;
+  font-size: 18px;
+  display: none;
+}
+
+#decks-table table
+{
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 1px 1px 2px #ffffff;
+  color: #6F5F49;
+  background-color: #e8ddc7;
+  border-collapse:collapse;
+  font-size: 22px;
+  width: 50%;
+  box-shadow: 7px 7px 3px #867669;
+}
+
+#decks-table td
+{
+  border: 1px solid #385843;
+  padding: 7px 0;
+  width: 150px;
+}
+
+.action-buttons {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.btn-oculto{
+	display: none;
+}
+
+button
+{
+  font-family: 'Londrina Solid';
+  color: #fff;
+  background-color: #6F5F49;
+  font-size: 26px;
+  padding: 12px;
+  margin-left: 70px;
+  margin-right: 70px;
+  border: 0 solid white;
+  letter-spacing: 2px;
+  box-shadow: 2px 2px 2px white;
+  position: relative;
+  /* top: -26px; */
+}
+
+button:hover {
+  background-color: #6F7248;
+}
+
+#select-subject, #select-num-cards{
+  font-family: 'Londrina Solid';
+  color: #fff;
+  background: url(../img/arrow.png) no-repeat right #ddd;
+  background-color: #6F7248;
+  background-position: 95% 50%;
+  margin-left: 20px;
+  width: 268px;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 1;
+  border: 2px solid white;
+  -webkit-appearance: none;
+}
+
+.selected-deck{
+  background-color: #6F7248;
+}
+
+#circle {
+  /* display: inline-block;*/
+  margin: 0 auto;
+  position: relative;
+  top: 26px;
+}
+
+.green {
+  background-color: #6F7248;
+}
+
+.red {
+  background-color: #BF032A
+}
+
+.brown {
+  background-color: #6F5F49;
+}
