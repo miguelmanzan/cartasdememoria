@@ -11,32 +11,44 @@
 <div class='header-title'>
   // Cartas de Memoria //
 </div>
-<div class="card">
-  <div id="question">
 
+<div class="card-container">
+  <div class="card">
+    <div id="question">
+
+    </div>
+    <div id="answer">
+
+    </div>
   </div>
-  <div id="answer">
-    Seleccione un tema: <select id="select-subject">
+</div>
+
+<div class="option-container">
+  <!-- <div id="select-card"> -->
+  Seleccione un tema:
+  <select id="select-subject">
     <option value="bash" selected>Línea de comandos</option>
     <option value="html">HTML</option>
     <option value="css">CSS</option>
     <option value="javascript">JavaScript</option>
   </select>
-    <br><br>
-    Número de Tarjetas: <select id="select-num-cards">
+  <br><br>
+  Número de Tarjetas:
+  <select id="select-num-cards">
     <option selected>5</option>
     <option>10</option>
     <option>15</option>
     <option>20</option>
     <option>25</option>
   </select>
-  </div>
+  <!-- </div> -->
 </div>
 <div class="action-buttons">
-  <img id="circle" src="img/circle.png">
   <button id="btn-start">Empezar</button>
-  <button id="btn-show-answer" class="btn-oculto green">Pulse para Ver Respuesta</button>
-  <button id="btn-correct" class="btn-oculto green">Correcta</button>
+</div>
+<br><br>
+<div class="action-buttons">
+  <button id="btn-correct" class="btn-oculto">Correcta</button>
   <button id="btn-incorrect" class="btn-oculto red">Incorrecta</button>
 </div>
 

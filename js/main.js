@@ -3,6 +3,8 @@ var flashcards = new Flashcards();
 
 // Ready
 $(document).ready(function () {
+  // Ocultamos card-container
+  $('.card-container').hide();
 
   // Evento: startGame()
   $('#btn-start').click(flashcards.startGame.bind(flashcards));
@@ -15,8 +17,5 @@ $(document).ready(function () {
 
   // Evento: pressIncorrect()
   $('#btn-incorrect').click(flashcards.pressIncorrect.bind(flashcards));
-
-  // Evento: showAnswer()
-  $('#btn-show-answer').click(flashcards.showAnswer.bind(flashcards));
 
 });

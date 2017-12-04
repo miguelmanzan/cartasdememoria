@@ -4,34 +4,39 @@ body
   font-family: 'Londrina Solid', cursive;
 }
 
-.card
+.card, .option-container
 {
   margin: 40px auto;
-  width: 50%;
-  background-color: #e8ddc7;
+  width: 60%;
   font-size: 30px;
   letter-spacing: 3px;
-  font-weight: bold;
   text-align: center;
   padding: 15px;
   color: #ffffff;
-  box-shadow: 7px 7px 3px #867669;
-  border: 1px solid #385843;
+}
+
+.option-container
+{
+  background-color: #289AD3;
+  font-size: 30px;
+  padding: 50px;
   border-radius: 10px;
+  box-shadow: 10px 10px 7px #cdc9ce;
+
 }
 
 #question
 {
-  background-color: #6F5F49;
+  box-shadow: 7px 7px 3px #cdc9ce;
+  background-color: #289AD3;
   padding: 40px 20px;
-  display: none;
 }
 
-#answer
+#answer, #select-card
 {
-  background-color: #6F7248;
+  box-shadow: 5px 5px 3px #cdc9ce;
+  background-color: #033649;
   padding: 40px 20px;
-
 }
 
 .header-title
@@ -39,15 +44,15 @@ body
   width: 70%;
   margin: 7px auto;
   text-align: center;
-  color: #6F5F49;
+  color: #033649;
   font-size: 70px;
 }
 
 #decks-table
 {
-  margin: 80px auto;
+  margin: -80px auto;
   text-align: center;
-  color: #000000;
+  color: #033649;
   font-size: 18px;
   display: none;
 }
@@ -56,18 +61,16 @@ body
 {
   margin: 0 auto;
   text-align: center;
-  text-shadow: 1px 1px 2px #ffffff;
-  color: #6F5F49;
-  background-color: #e8ddc7;
-  border-collapse:collapse;
+  color: #033649;
+  background-color: #fff;
   font-size: 22px;
-  width: 50%;
-  box-shadow: 7px 7px 3px #867669;
+  width: 48%;
+  box-shadow: 5px 5px 3px #cdc9ce;
+  border: 10px solid #fff;
 }
 
 #decks-table td
 {
-  border: 1px solid #385843;
   padding: 7px 0;
   width: 150px;
 }
@@ -77,35 +80,29 @@ body
   text-align: center;
 }
 
-.btn-oculto{
-	display: none;
-}
-
 button
 {
   font-family: 'Londrina Solid';
   color: #fff;
-  background-color: #6F5F49;
+  background-color: #033649;
   font-size: 26px;
   padding: 12px;
   margin-left: 70px;
   margin-right: 70px;
-  border: 0 solid white;
   letter-spacing: 2px;
-  box-shadow: 2px 2px 2px white;
+  box-shadow: 5px 5px 3px #cdc9ce;
   position: relative;
-  /* top: -26px; */
 }
 
 button:hover {
-  background-color: #6F7248;
+  background-color: #289AD3;
 }
 
 #select-subject, #select-num-cards{
   font-family: 'Londrina Solid';
   color: #fff;
   background: url(../img/arrow.png) no-repeat right #ddd;
-  background-color: #6F7248;
+  background-color: #289AD3;
   background-position: 95% 50%;
   margin-left: 20px;
   width: 268px;
@@ -117,24 +114,54 @@ button:hover {
 }
 
 .selected-deck{
-  background-color: #6F7248;
+  background-color: #289AD3;
 }
 
 #circle {
-  /* display: inline-block;*/
   margin: 0 auto;
   position: relative;
   top: 26px;
-}
-
-.green {
-  background-color: #6F7248;
 }
 
 .red {
   background-color: #BF032A
 }
 
-.brown {
-  background-color: #6F5F49;
+.card-container {
+  perspective: 10000px;
+}
+
+.card-container:hover .card, .card-container.hover .card {
+  transform: rotateY(180deg);
+}
+
+.card{
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+#question, #answer {
+  -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#question {
+  transform: rotateY(0deg);
+}
+
+#answer {
+  transform: rotateY(180deg);
+}
+
+.card-container, #question, #answer {
+  width: 100%;
+  height: 280px;
+}
+
+.btn-oculto {
+  display: none;
 }
