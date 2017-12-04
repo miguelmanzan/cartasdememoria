@@ -6,7 +6,7 @@ body
 
 .card, .option-container
 {
-  margin: 40px auto;
+  margin: 10px auto;
   width: 60%;
   font-size: 30px;
   letter-spacing: 3px;
@@ -17,24 +17,23 @@ body
 
 .option-container
 {
+  margin: 35px auto;
   background-color: #289AD3;
   font-size: 30px;
   padding: 50px;
   border-radius: 10px;
-  box-shadow: 10px 10px 7px #cdc9ce;
-
+  border: 2px solid #033649;
 }
 
 #question
 {
-  box-shadow: 7px 7px 3px #cdc9ce;
   background-color: #289AD3;
   padding: 40px 20px;
 }
 
 #answer, #select-card
 {
-  box-shadow: 5px 5px 3px #cdc9ce;
+  /* box-shadow: 5px 5px 3px #cdc9ce; */
   background-color: #033649;
   padding: 40px 20px;
 }
@@ -65,8 +64,7 @@ body
   background-color: #fff;
   font-size: 22px;
   width: 48%;
-  box-shadow: 5px 5px 3px #cdc9ce;
-  border: 10px solid #fff;
+  border: 2px solid #033649;
 }
 
 #decks-table td
@@ -90,7 +88,6 @@ button
   margin-left: 70px;
   margin-right: 70px;
   letter-spacing: 2px;
-  box-shadow: 5px 5px 3px #cdc9ce;
   position: relative;
 }
 
@@ -131,7 +128,7 @@ button:hover {
   perspective: 10000px;
 }
 
-.card-container:hover .card, .card-container.hover .card {
+.card-container-rotated {
   transform: rotateY(180deg);
 }
 
@@ -151,6 +148,7 @@ button:hover {
 
 #question {
   transform: rotateY(0deg);
+  border: 1px solid #033649;
 }
 
 #answer {

@@ -1,5 +1,6 @@
 // Variables Globales
 var flashcards = new Flashcards();
+console.log("Iniciando");
 
 // Ready
 $(document).ready(function () {
@@ -17,5 +18,11 @@ $(document).ready(function () {
 
   // Evento: pressIncorrect()
   $('#btn-incorrect').click(flashcards.pressIncorrect.bind(flashcards));
+
+  console.log("ready");
+  //Evento de rotación
+  $(".card-container").click(function(){
+    $(".card-container").toggleClass("card-container-rotated");
+  });
 
 });
