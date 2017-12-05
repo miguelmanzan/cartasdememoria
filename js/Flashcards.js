@@ -128,7 +128,7 @@ Flashcards.prototype.showEmpty = function () {
   $('#btn-incorrect').hide();
 
   // Ocultar card-container
-  $('.card-container').hide();
+  $('.flip').hide();
 
   // Mostrar option-container
   $('.option-container').show();
@@ -144,6 +144,9 @@ Flashcards.prototype.showEmpty = function () {
 
 // Método: showCart() //
 Flashcards.prototype.showCart = function () {
+
+
+
   // Guardamos la carta en un variable temporal
   temporal = flashcards.decks[this.currentDeck][this.pos];
 
@@ -157,16 +160,20 @@ Flashcards.prototype.showCart = function () {
   this.countCards();
 
   // Mostrar card-container
-  $('.card-container').show();
+  $('.flip').show();
 
   // Mostrar tabla
   $('#decks-table').hide();
 
   // Imprimir pregunta de la siguiente carta
-  $('#question').text(flashcards.decks[this.currentDeck][this.pos].pregunta);
+  $('.front').text(flashcards.decks[this.currentDeck][this.pos].pregunta);
 
   // Imprimir la respuesta de la carta que toque
-  $('#answer').text(flashcards.decks[this.currentDeck][this.pos].respuesta);
+  $('.back').text(flashcards.decks[this.currentDeck][this.pos].respuesta);
+
+  $('.front').height("auto");
+  $('.back').height("auto");
+  $('.flip').height("auto");
 
   // Ocultamos el botón "Empezar"
   $('#btn-start').hide();
@@ -176,6 +183,20 @@ Flashcards.prototype.showCart = function () {
 
   // Mostramos el encabezado "Pregunta X"
   $('.header-title').text("// Pregunta " + this.cardNum + " //");
+
+  var frontHeight = $('.front').outerHeight();
+  var backHeight = $('.back').outerHeight();
+
+  if (frontHeight > backHeight) {
+    $('.front').height(frontHeight);
+    $('.back').height(frontHeight);
+    $('.flip').height(frontHeight);
+  }
+  else {
+    $('.front').height(backHeight);
+    $('.back').height(backHeight);
+    $('.flip').height(backHeight);
+  }
 }
 
 // Método fillDecks()

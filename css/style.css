@@ -1,47 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
 body
 {
   background:url(../img/background.png);
   font-family: 'Londrina Solid', cursive;
 }
 
-.card, .option-container
+.flip, .option-container
 {
-  margin: 10px auto;
+  margin: 0 auto;
   width: 60%;
   font-size: 30px;
   letter-spacing: 3px;
   text-align: center;
-  padding: 15px;
   color: #ffffff;
 }
 
 .option-container
 {
+  width: 70%;
   margin: 35px auto;
-  background-color: #289AD3;
+  background-color: #1589CA;
   font-size: 30px;
-  padding: 50px;
+  padding: 70px 0;
   border-radius: 10px;
   border: 2px solid #033649;
-}
-
-#question
-{
-  background-color: #289AD3;
-  padding: 40px 20px;
-}
-
-#answer, #select-card
-{
-  /* box-shadow: 5px 5px 3px #cdc9ce; */
-  background-color: #033649;
-  padding: 40px 20px;
 }
 
 .header-title
 {
   width: 70%;
-  margin: 7px auto;
+  margin: 10px auto;
   text-align: center;
   color: #033649;
   font-size: 70px;
@@ -49,7 +45,7 @@ body
 
 #decks-table
 {
-  margin: -80px auto;
+  margin: -40px auto;
   text-align: center;
   color: #033649;
   font-size: 18px;
@@ -69,12 +65,16 @@ body
 
 #decks-table td
 {
-  padding: 7px 0;
+  padding: 10px 0;
   width: 150px;
 }
 
 .action-buttons {
-  margin: 40px auto;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.start-buttons {
   text-align: center;
 }
 
@@ -84,80 +84,78 @@ button
   color: #fff;
   background-color: #033649;
   font-size: 26px;
-  padding: 12px;
-  margin-left: 70px;
-  margin-right: 70px;
+  padding: 10px 10px;
+  margin: 0 10px;
   letter-spacing: 2px;
-  position: relative;
+  border: 1px solid #000;
 }
 
 button:hover {
-  background-color: #289AD3;
+  background-color: #1589CA;
 }
 
 #select-subject, #select-num-cards{
   font-family: 'Londrina Solid';
   color: #fff;
   background: url(../img/arrow.png) no-repeat right #ddd;
-  background-color: #289AD3;
+  background-color: #1589CA;
   background-position: 95% 50%;
-  margin-left: 20px;
+  margin: 5px 20px;
   width: 268px;
-  padding: 5px;
+  padding: 10px 20px;
   font-size: 20px;
-  line-height: 1;
   border: 2px solid white;
   -webkit-appearance: none;
 }
 
 .selected-deck{
-  background-color: #289AD3;
-}
-
-#circle {
-  margin: 0 auto;
-  position: relative;
-  top: 26px;
+  background-color: #1589CA;
 }
 
 .red {
-  background-color: #BF032A
+  background-color: #BF032A;
 }
 
-.card-container {
-  perspective: 10000px;
-}
+.flip {
+  -webkit-perspective: 800px;
+  margin: 30px auto;
+  width: 60%;
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #ffffff;
 
-.card-container-rotated {
+}
+.flip .card.flipped {
   transform: rotateY(180deg);
 }
-
-.card{
-  transition: 0.6s;
+.flip .card {
+  height: 100%;
   transform-style: preserve-3d;
-  position: relative;
+  transition: 0.5s;
 }
-
-#question, #answer {
-  -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
-  backface-visibility: hidden;
+.flip .card .face {
+  width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  backface-visibility: hidden;
+  z-index: 2;
+  text-align: center;
+}
+.flip .card .front {
+  z-index: 1;
+  background-color: #1589CA;
+}
+.flip .card .back {
+  transform: rotateY(180deg);
+  background-color: #033649;
 }
 
-#question {
-  transform: rotateY(0deg);
+.front, .back {
   border: 1px solid #033649;
 }
 
-#answer {
-  transform: rotateY(180deg);
-}
-
-.card-container, #question, #answer {
-  width: 100%;
-  height: 280px;
+.front, .back {
+  padding: 50px 20px 0 20px;
 }
 
 .btn-oculto {
