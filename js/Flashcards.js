@@ -4,6 +4,8 @@ var Flashcards = function (desks) {
   this.pos; // Posición actual
   this.cardNum; // Número de tarjeta
   this.decks; // Array de arrays[mazo][carta]
+  this.frontHeight; // Altura front
+  this.backHeight; // Altura back
 }
 
 // Metodo startGame() //
@@ -145,15 +147,16 @@ Flashcards.prototype.showEmpty = function () {
 // Método: showCart() //
 Flashcards.prototype.showCart = function () {
 
+  // Asegurar que aparezca el front
+  $('.card').removeClass('flipped');
 
-
-  // Guardamos la carta en un variable temporal
+  // Guardar carta en temporal
   temporal = flashcards.decks[this.currentDeck][this.pos];
 
-  // Mostramos el botón "Correcta"
+  // Mostrar botón "Correcta"
   $('#btn-correct').show();
 
-  // Mostramos el botón "Incorrecta"
+  // Mostrar botón "Incorrecta"
   $('#btn-incorrect').show();
 
   // Contar cartas
@@ -162,40 +165,43 @@ Flashcards.prototype.showCart = function () {
   // Mostrar card-container
   $('.flip').show();
 
-  // Mostrar tabla
+  // Ocultar tabla
   $('#decks-table').hide();
 
-  // Imprimir pregunta de la siguiente carta
-  $('.front').text(flashcards.decks[this.currentDeck][this.pos].pregunta);
+  // Imprimir pregunta
+  $('.front').html(flashcards.decks[this.currentDeck][this.pos].pregunta);
 
-  // Imprimir la respuesta de la carta que toque
-  $('.back').text(flashcards.decks[this.currentDeck][this.pos].respuesta);
+  // Imprimir respuesta
+  $('.back').html(flashcards.decks[this.currentDeck][this.pos].respuesta);
 
+  // Resetear altura a auto
   $('.front').height("auto");
   $('.back').height("auto");
   $('.flip').height("auto");
 
-  // Ocultamos el botón "Empezar"
+  // Ocultar botón "Empezar"
   $('#btn-start').hide();
 
-  // Ocultamos la caja option-container
+  // Ocultar option-container
   $('.option-container').hide();
 
-  // Mostramos el encabezado "Pregunta X"
+  // Mostrar encabezado "Pregunta X"
   $('.header-title').text("// Pregunta " + this.cardNum + " //");
 
-  var frontHeight = $('.front').outerHeight();
-  var backHeight = $('.back').outerHeight();
+  // Asignamos altura
+  this.frontHeight = $('.front').outerHeight();
+  this.backHeight = $('.back').outerHeight();
 
-  if (frontHeight > backHeight) {
-    $('.front').height(frontHeight);
-    $('.back').height(frontHeight);
-    $('.flip').height(frontHeight);
+  // Asignamos a
+  if (this.frontHeight >= this.backHeight) {
+    $('.front').height(this.frontHeight);
+    $('.back').height(this.frontHeight);
+    $('.flip').height(this.frontHeight);
   }
   else {
-    $('.front').height(backHeight);
-    $('.back').height(backHeight);
-    $('.flip').height(backHeight);
+    $('.front').height(this.backHeight);
+    $('.back').height(this.backHeight);
+    $('.flip').height(this.backHeight);
   }
 }
 

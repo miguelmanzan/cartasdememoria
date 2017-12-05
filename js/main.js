@@ -4,11 +4,6 @@ console.log("Iniciando");
 
 // Ready
 $(document).ready(function () {
-  // Ocultamos card-container
-  $('.flip').hide();
-
-  $("#answer").toggleClass("btn-oculto");
-
   // Evento: startGame()
   $('#btn-start').click(flashcards.startGame.bind(flashcards));
 
@@ -23,6 +18,6 @@ $(document).ready(function () {
 
   //Evento de rotación
   $(".flip").click(function(){
-    $(this).find('.card').toggleClass('flipped');
+    $('.card').toggleClass('flipped');
   });
 });

@@ -124,6 +124,7 @@ button:hover {
   letter-spacing: 3px;
   text-align: center;
   color: #ffffff;
+  display: none;
 
 }
 .flip .card.flipped {

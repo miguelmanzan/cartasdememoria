@@ -1,6 +1,6 @@
 var subjects = {
   'bash' : [
-    new Card("Comando: Mostrar Nombre de Usuario", "$ hostname Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de UsuarioMostrar Nombre de Usuario Mostrar Nombre de Usuario"),
+    new Card("Comando: Mostrar Nombre de Usuario", "$ hostnamen <br /><br /><br /> &#163; Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de Usuario Mostrar Nombre de UsuarioMostrar Nombre de Usuario Mostrar Nombre de Usuario"),
     new Card("Comando: Mostrar Nombre del Ordenador", "$ hostname"),
     new Card("Comando: Mostrar Directorio Actual", "$ pwd"),
     new Card("Comando: Listar Archivos del Directorio", "$ ls"),
