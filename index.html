@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet">
-
+  <link rel="stylesheet" href="icons/css/font-awesome.min.css">
 </head>
 <body>
+
 <div class='header-title'>
-  // Cartas de Memoria //
+  <i class="fa fa-map" aria-hidden="true"></i>
+  Cartas de Memoria
 </div>
 
 <div class="flip">
@@ -23,9 +25,9 @@
   Seleccione un tema:
   <select id="select-subject">
     <option value="bash" selected>Línea de comandos</option>
+    <option value="git">GIT</option>
     <option value="html">HTML</option>
     <option value="css">CSS</option>
-    <option value="javascript">JavaScript</option>
   </select>
   <br><br>
   Número de Tarjetas:
@@ -47,36 +49,62 @@
 
 <div id='decks-table'>
   <table>
+
     <tr>
       <td>
+        <i class="fa fa-folder-o fa-2x" aria-hidden="true"></i>
         <button id="btn-deck0">Mazo 0</button>
       </td>
-      <td id="box0">Tarjetas:</td>
-    <tr>
+      <td>
+        <i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <span id="box0">Tarjetas:</span>
+      </td>
+    </tr>
+
     <tr>
       <td>
+        <i class="fa fa-folder-o fa-2x" aria-hidden="true"></i>
         <button id="btn-deck1">Mazo 1</button>
       </td>
-      <td id="box1">Tarjetas:</td>
-    <tr>
+      <td>
+        <i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <span id="box1">Tarjetas:</span>
+      </td>
+    </tr>
+
     <tr>
       <td>
+        <i class="fa fa-folder-o fa-2x" aria-hidden="true"></i>
         <button id="btn-deck2">Mazo 2</button>
       </td>
-      <td id="box2">Tarjetas:</td>
-    <tr>
+      <td>
+        <i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <span id="box2">Tarjetas:</span>
+      </td>
+    </tr>
+
     <tr>
       <td>
+        <i class="fa fa-folder-o fa-2x" aria-hidden="true"></i>
         <button id="btn-deck3">Mazo 3</button>
       </td>
-      <td id="box3">Tarjetas:</td>
-    <tr>
+      <td>
+        <i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <span id="box3">Tarjetas:</span>
+      </td>
+    </tr>
+
     <tr>
       <td>
+        <i class="fa fa-folder-o fa-2x" aria-hidden="true"></i>
         <button id="btn-deck4">Mazo 4</button>
       </td>
-      <td id="box4">Tarjetas:</td>
+      <td>
+        <i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <span id="box4">Tarjetas:</span>
+      </td>
     <tr>
+
   </table>
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

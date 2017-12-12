@@ -60,6 +60,7 @@ body
   background-color: #fff;
   font-size: 22px;
   width: 48%;
+  padding: 20px;
   border: 2px solid #033649;
 }
 
@@ -133,12 +134,13 @@ button:hover {
 .flip .card {
   height: 100%;
   transform-style: preserve-3d;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .flip .card .face {
   width: 100%;
   position: absolute;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   z-index: 2;
   text-align: center;
 }
@@ -153,6 +155,7 @@ button:hover {
 
 .front, .back {
   border: 1px solid #033649;
+  white-space: pre-line;
 }
 
 .front, .back {
@@ -162,3 +165,25 @@ button:hover {
 .btn-oculto {
   display: none;
 }
+
+.fa-folder-o {
+  vertical-align: -12%;
+  margin-right: 15px;
+}
+
+.fa-list-alt {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.fa-thumbs-o-up {
+  margin-right: 15px;
+}
+
+.fa-map {
+  margin-right: 15px;
+}
+
+.fa-question-circle {
+   margin-right: 15px;
+ }

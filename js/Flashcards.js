@@ -135,10 +135,10 @@ Flashcards.prototype.showEmpty = function () {
   // Mostrar option-container
   $('.option-container').show();
 
-  $('.option-container').text("Mazo Terminado o Vacío. Por favor, seleccione otro mazo");
+  $('.option-container').html(' Mazo Terminado o Vacío. Por favor, seleccione otro mazo');
 
   // Mazo Terminado
-  $('.header-title').text("// Mazo Terminado //");
+  $('.header-title').html('<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>' + ' Mazo Terminado');
 
   // Mostrar tabla
   $('#decks-table').show();
@@ -169,10 +169,10 @@ Flashcards.prototype.showCart = function () {
   $('#decks-table').hide();
 
   // Imprimir pregunta
-  $('.front').html(flashcards.decks[this.currentDeck][this.pos].pregunta);
+  $('.front').text(flashcards.decks[this.currentDeck][this.pos].pregunta);
 
   // Imprimir respuesta
-  $('.back').html(flashcards.decks[this.currentDeck][this.pos].respuesta);
+  $('.back').text(flashcards.decks[this.currentDeck][this.pos].respuesta);
 
   // Resetear altura a auto
   $('.front').height("auto");
@@ -186,7 +186,7 @@ Flashcards.prototype.showCart = function () {
   $('.option-container').hide();
 
   // Mostrar encabezado "Pregunta X"
-  $('.header-title').text("// Pregunta " + this.cardNum + " //");
+  $('.header-title').html('<i class="fa fa-question-circle fa-spin" aria-hidden="true"></i>' + ' Pregunta ' + this.cardNum);
 
   // Asignamos altura
   this.frontHeight = $('.front').outerHeight();
@@ -232,9 +232,9 @@ Flashcards.prototype.fillDecks = function (selectedSubject) {
 
 // Método: countCards() //
 Flashcards.prototype.countCards = function () {
-  $('#box0').text("Tarjetas: " + this.decks[0].length);
-  $('#box1').text("Tarjetas: " + this.decks[1].length);
-  $('#box2').text("Tarjetas: " + this.decks[2].length);
-  $('#box3').text("Tarjetas: " + this.decks[3].length);
-  $('#box4').text("Tarjetas: " + this.decks[4].length);
+  $('#box0').text(" Tarjetas: " + this.decks[0].length);
+  $('#box1').text(" Tarjetas: " + this.decks[1].length);
+  $('#box2').text(" Tarjetas: " + this.decks[2].length);
+  $('#box3').text(" Tarjetas: " + this.decks[3].length);
+  $('#box4').text(" Tarjetas: " + this.decks[4].length);
 };
