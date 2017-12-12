@@ -146,9 +146,10 @@ Flashcards.prototype.showEmpty = function () {
 
 // Método: showCart() //
 Flashcards.prototype.showCart = function () {
+  // start-buttons
 
-  // Asegurar que aparezca el front
-  $('.card').removeClass('flipped');
+  // Ocultar Video
+  $('.video').hide();
 
   // Guardar carta en temporal
   temporal = flashcards.decks[this.currentDeck][this.pos];
